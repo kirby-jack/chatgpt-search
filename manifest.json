@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "ChatGPT Search",
+  "version": "1.0.0",
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "ChatGPT",
+      "search_url": "https://chatgpt.com/?q={searchTerms}&hints=search&ref=ext",
+      "is_default": true
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://*.chatgpt.com/*"
+      ],
+      "js": ["content_script.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chatgpt-search-firefox@jackkirby.local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["searchTerms"]
+      }
+    }
+  }
+}

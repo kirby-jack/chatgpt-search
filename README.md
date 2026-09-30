@@ -26,6 +26,28 @@ document.documentElement.dataset.searchExtension = "1";
 
 on ChatGPT pages.
 
+## Searching with Google
+
+ChatGPT is your default search engine. To search Google instead, enter this in Firefox's address bar:
+
+```text
+@google your search terms
+```
+
+For a shorter shortcut:
+
+1. Open **Firefox Settings → Search**.
+2. Find Google under **Search Shortcuts** or **Additional search engines**.
+3. Edit its keyword to `g`.
+
+You can then search Google using:
+
+```text
+g your search terms
+```
+
+Searches without a shortcut continue to use ChatGPT. These shortcuts are handled by Firefox and require no changes to the extension.
+
 ## What it does not do
 
 - no analytics
